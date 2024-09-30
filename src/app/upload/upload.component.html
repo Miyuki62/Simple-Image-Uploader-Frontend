@@ -33,14 +33,12 @@
         <img src="/assets/images/exit.svg" alt="Upload Icon" />
       </div>
       <span class="drag-header" id="drag-header-text">
-        Glissez et déposez un fichier ou
+        Drag & drop a file or
         <span class="drag-header">
-          <span class="button" (click)="fileInput.click()"
-            >parcourir les fichiers</span
-          >
+          <span class="button" (click)="fileInput.click()">browse files</span>
         </span>
       </span>
-      <span id="drag-support">JPG, PNG ou GIF - Taille maximale 2 Mo</span>
+      <span id="drag-support">JPG, PNG or GIF - Max file size 2MB</span>
       <input type="file" #fileInput (change)="onSelect($event)" hidden />
       <div *ngIf="errorMessage" class="warning">{{ errorMessage }}</div>
     </div>

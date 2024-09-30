@@ -1,0 +1,17 @@
+<div id="header-container" [class.dark-mode]="darkmod">
+  <span id="logo"
+    ><img src="/assets/images/logo-small.svg" alt="logo" /><span id="logo-text"
+      >ImageUpload</span
+    ></span
+  >
+
+  <button (click)="toggleDarkMode()" id="darkModeButton">
+    <img
+      id="darkModeButtonimg"
+      [src]="
+        darkmod ? '/assets/images/Sun_fill.svg' : '/assets/images/Moon_fill.svg'
+      "
+      lt="Toggle Dark Mode"
+    />
+  </button>
+</div>

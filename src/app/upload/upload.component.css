@@ -1,0 +1,59 @@
+#drag-area-container {
+  /* display: none; */
+}
+.drag-area {
+  height: 400px;
+  border: 2px dashed #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#drag-area.drag-over {
+  border-color: #4f46e5; /* Change border color when dragging over */
+  background-color: #c2daf9;
+}
+
+.drag-header {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.button {
+  font-weight: 600;
+  color: #3662e3;
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+#drag-support {
+  padding-top: 10px;
+  font-size: smaller;
+  color: black;
+}
+
+.warning {
+  color: red; /* Warning message color */
+  margin-top: 10px; /* Space above the warning message */
+  font-weight: bold; /* Make it bold for emphasis */
+}
+
+/* Dark Mode Styles */
+#drag-area.dark-mode {
+  border-color: #4d5562;
+}
+.drag-area.dark-mode.drag-header {
+  color: #ffffff;
+}
+.dark-mode #drag-support {
+  color: #f9fafbcc;
+}
+#drag-area.dark-mode.drag-over {
+  border-color: #c2daf9; /* Change border color when dragging over */
+  background-color: #4d5562;
+}

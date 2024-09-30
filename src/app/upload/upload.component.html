@@ -1,0 +1,31 @@
+<div id="container">
+  <div id="drag-area-container" [class.dark-mode]="darkmod">
+    <div
+      id="drag-area"
+      class="drag-area"
+      (dragover)="onDragOver($event)"
+      (dragleave)="onDragLeave($event)"
+      (drop)="onDrop($event)"
+      [ngClass]="{ 'drag-over': isDragging, 'dark-mode': darkmod }"
+      tabindex="0"
+      role="button"
+      aria-label="Zone de dépôt pour télécharger des fichiers"
+    >
+      <div class="icon">
+        <img src="/assets/images/exit.svg" alt="Upload Icon" />
+      </div>
+      <span class="drag-header" id="drag-header-text">
+        Glissez et déposez un fichier ou
+        <span class="drag-header">
+          <span class="button" (click)="fileInput.click()"
+            >parcourir les fichiers</span
+          >
+        </span>
+      </span>
+      <span id="drag-support">JPG, PNG ou GIF - Taille maximale 2 Mo</span>
+      <input type="file" #fileInput (change)="onSelect($event)" hidden />
+      <div *ngIf="errorMessage" class="warning">{{ errorMessage }}</div>
+      <!-- Affichage des messages d'erreur -->
+    </div>
+  </div>
+</div>

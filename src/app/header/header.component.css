@@ -1,0 +1,44 @@
+#header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100vw;
+  height: 50px;
+  outline: 1px solid #e5e7eb;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#logo {
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+#logo-text {
+  padding-left: 10px;
+  color: black;
+}
+#darkModeButton {
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  outline: 1px solid #e5e7eb;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+/* Dark mode styles */
+.dark-mode#header-container {
+  background-color: #121826;
+  outline: 1px solid #4d5562;
+}
+
+.dark-mode #logo-text {
+  color: #ffffff; /* Change text color in dark mode */
+}
+
+.dark-mode #darkModeButton {
+  background-color: #4d5562; /* Darker button background */
+  outline: 1px solid #4d5562; /* Match the outline */
+}

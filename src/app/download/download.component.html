@@ -1,0 +1,35 @@
+<div id="container">
+  <div id="download-img-container" [class.dark-mode]="darkmod">
+    <img
+      *ngIf="imageUrl"
+      id="download-img"
+      [src]="imageUrl"
+      alt="Image not found"
+    />
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+
+  <div id="dual-buttons">
+    <button id="share-button" type="button" (click)="copyWebsiteUrl()">
+      <img
+        src="assets/images/Link.svg"
+        alt="Share Icon"
+        width="16"
+        height="16"
+      />
+      Share
+    </button>
+    <button id="download-button" type="button" (click)="downloadImage()">
+      <img
+        src="assets/images/download.svg"
+        alt="Download Icon"
+        width="16"
+        height="16"
+      />
+      Download
+    </button>
+    <div *ngIf="copySuccessMessage" class="copy-success">
+      {{ copySuccessMessage }}
+    </div>
+  </div>
+</div>

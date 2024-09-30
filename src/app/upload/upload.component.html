@@ -1,5 +1,23 @@
 <div id="container">
-  <div id="drag-area-container" [class.dark-mode]="darkmod">
+  <!-- Loader Section -->
+  <div id="wrapper-loader-container" *ngIf="isUploading">
+    <div id="loader_container" [class.dark-mode]="darkmod">
+      <div id="loader_text">
+        <div class="bold uptext" id="boldtext">Uploading,</div>
+        <div>please wait..</div>
+      </div>
+      <div id="loader">
+        <div class="blue-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drag-and-Drop Area, hidden when uploading -->
+  <div
+    id="drag-area-container"
+    *ngIf="!isUploading"
+    [class.dark-mode]="darkmod"
+  >
     <div
       id="drag-area"
       class="drag-area"
@@ -25,7 +43,6 @@
       <span id="drag-support">JPG, PNG ou GIF - Taille maximale 2 Mo</span>
       <input type="file" #fileInput (change)="onSelect($event)" hidden />
       <div *ngIf="errorMessage" class="warning">{{ errorMessage }}</div>
-      <!-- Affichage des messages d'erreur -->
     </div>
   </div>
 </div>
